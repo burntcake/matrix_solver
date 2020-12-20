@@ -29,6 +29,8 @@ will not cause an exponential running time since there is only one look behind a
 
 An alternative to lookbehind and lookahead would be to have three seperate regular expressions.
 ^([^a-zA-Z0-9]+)[a-zA-Z0-9] : To match and cut non-alphanumric characters from the front of the string
-[a-zA-Z0-9]([^a-zA-Z0-9]+)$ : To match and cut non-alphanumeric characters from the end of the string
+
+[a-zA-Z0-9]/([^a-zA-Z0-9]+)$ : To match and cut non-alphanumeric characters from the end of the string
+
 ([^a-zA-Z0-9]+): To match non alpha numeric characters left and replace with a space
 And then splice them back togethor. However this method would require some if conditions.
