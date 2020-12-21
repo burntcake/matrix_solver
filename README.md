@@ -27,10 +27,10 @@ in order to support features like lookbehind.
 This algorithm can potentially have an exponential running time (allowing denial of service attacks with very inefficient regex), however this particular regex expression 
 will not cause an exponential running time since there is only one look behind and one lookahead. 
 
-An alternative to lookbehind and lookahead would be to have three seperate regular expressions.
-^([^a-zA-Z0-9]+)[a-zA-Z0-9] : To match and cut non-alphanumric characters from the front of the string
+An alternative to lookbehind and lookahead would be to have three seperate regular expressions.<br/>
+^([^a-zA-Z0-9]+)[a-zA-Z0-9] : To match and cut non-alphanumric characters from the front of the string<br/>
 
-[a-zA-Z0-9]/([^a-zA-Z0-9]+)$ : To match and cut non-alphanumeric characters from the end of the string
+[a-zA-Z0-9]/([^a-zA-Z0-9]+)$ : To match and cut non-alphanumeric characters from the end of the string<br/>
 
-([^a-zA-Z0-9]+): To match non alpha numeric characters left and replace with a space
+([^a-zA-Z0-9]+): To match non alpha numeric characters left and replace with a space<br/>
 And then splice them back togethor. However this method would require some if conditions.
